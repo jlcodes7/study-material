@@ -1,7 +1,7 @@
 # Helper Functions #
 
 # uses the mine string to create a matrix of the mine field
-def createMine(mineStr, mineCols):
+def createMineField(mineStr, mineCols):
     tmp = [mineStr[i: i + mineCols] for i in range(0, len(mineStr) - 1, mineCols)]
     
     mineBoard = [list(n) for n in tmp]
@@ -40,7 +40,7 @@ mineCols = int(mineSize[1])
 
 mineStr = str(mineInfo[1])
 
-mineField = createMine(mineStr, mineCols)
+mineField = createMineField(mineStr, mineCols)
 
 coords = [0, 0]
  
